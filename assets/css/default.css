@@ -27,25 +27,6 @@
 
 .custom-navbar-glass {
   background: rgba(255, 255, 255, 0.4);
-  xbackground: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 0.2) 0%,
-    rgba(255, 255, 255, 0.3) 30%,
-    rgba(255, 255, 255, 0.3) 70%,
-    rgba(255, 255, 255, 0.2) 100%
-  );
-  dbackground: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 0.3) 0%,
-    rgba(255, 255, 255, 0.5) 18%,
-    rgba(255, 255, 255, 0.6) 33%,
-    rgba(255, 255, 255, 0.65) 40%,
-    rgba(255, 255, 255, 0.65) 60%,
-    rgba(255, 255, 255, 0.6) 67%,
-    rgba(255, 255, 255, 0.5) 82%,
-    rgba(255, 255, 255, 0.3) 100%
-  );
-  /*border-radius: 16px;*/
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(5px);
@@ -114,6 +95,7 @@ main article:first-of-type > .section:first-child {
 
 .custom-footer-dark {
   padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 /** Hero Styling */
