@@ -1,4 +1,7 @@
-.site-imprint main {
+.site-imprint main,
+.site-privacy main,
+.site-imprint header
+.site-privacy header {
   background-color: white;
 }
 
