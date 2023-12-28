@@ -1,4 +1,10 @@
 .site-imprint main,
+.site-privacy main {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.site-imprint main,
 .site-privacy main,
 .site-imprint header
 .site-privacy header {
