@@ -99,6 +99,10 @@ main article:first-of-type > .section:first-child {
   padding-right: 5vw;
 }
 
+.custom-footer-dark {
+  padding-top: 1rem;
+}
+
 /** Hero Styling */
 
 .hero-text {
@@ -107,9 +111,7 @@ main article:first-of-type > .section:first-child {
   line-height: calc(max(1.25em, 1.9rem));
   font-family: serif;
   background-color: rgba(0, 0, 0, 0.3);
-  /*border-radius: 1px 50px 1px 50px;*/
   border: 1px solid rgba(0, 0, 0, 0.05);
-  /*border: 1px solid rgba(128, 128, 128, 0.6);*/
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1),
     1px 1px 10px rgba(255, 255, 255, 0.1);
