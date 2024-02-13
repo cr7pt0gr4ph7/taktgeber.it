@@ -1,0 +1,7 @@
+.header-skip-link {
+  background-color: white;
+}
+
+.header-skip-link:not(.visually-hidden-focusable) {
+  display: none;
+}

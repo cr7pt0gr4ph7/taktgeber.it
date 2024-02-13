@@ -2,4 +2,9 @@
  * This is the main entrypoint for our CSS styles.
  * It is included by assets/css/default.css.
  */
-@import "content";
+
+@import "header/skip-link";
+@import "header/navbar";
+@import "hero/hero";
+@import "footer/footer";
+@import "layout";

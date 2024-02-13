@@ -1,0 +1,75 @@
+/** Hero Styling */
+
+.hero-text {
+  color: white;
+  line-height: 1.25;
+  line-height: calc(max(1.25em, 1.9rem));
+  font-family: serif;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1),
+    1px 1px 10px rgba(255, 255, 255, 0.1);
+
+  --custom-hero-base-size: 3rem;
+  --custom-hero-reference-device-width: 1084px;
+  font-size: calc(min(var(--custom-hero-base-size),
+        var(--custom-hero-base-size) * 100vw / var(--custom-hero-reference-device-width)));
+  /* 3rem = 48px, 48px/1084px ~= 0.0442 */
+  font-size: calc(max(1.2rem, min(3rem, 4.4vw)));
+}
+
+.contact-text {
+  color: white;
+  font-family: serif;
+}
+
+.contact-button {
+  color: white !important;
+  padding: 1.2rem 2.004rem;
+}
+
+/** Background Image **/
+
+:root {
+  --previous-section-divider-offset: 0px;
+}
+
+.section-border {
+  position: absolute;
+  top: calc(-1 * var(--previous-section-divider-offset, 0px));
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.section-background {
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.section-background,
+.section-background .section-background-content,
+.section-background .section-background-canvas,
+.section-background .section-background-overlay {
+  position: absolute;
+  inset: 0px;
+}
+
+.section-background img {
+  position: relative;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/** ::after pseudo element so the shadow appears on top of the <img/> within this element. */
+.section-background::after {
+  box-shadow: inset 0 -32px 30px -30px black;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
