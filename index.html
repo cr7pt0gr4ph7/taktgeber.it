@@ -1,72 +1,35 @@
-<html class="site-landingpage" lang="de">
-
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lukas Waslowski - Software. Entwicklung. Architektur.</title>
-    <link href="/assets/img/BannerImage-Full.jpg" rel="preload" as="image" fetchpriority="high" blocking="render" />
-    <link href="/assets/css/bootstrap-icons.min.css" rel="stylesheet" crossorigin="anonymous" />
-    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
-    <link href="/assets/css/default.css" rel="stylesheet" />
-  </head>
-
-  <body>
-    <header>
-      <a href="#content" tabindex="1" class="header-skip-link visually-hidden-focusable">Zum Inhalt springen</a>
-      <nav class="navbar navbar-expand-lg custom-navbar-glass custom-navbar-tall custom-navbar-floating">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/"><span class="title">Lukas Waslowski</span>&nbsp;&nbsp; <span class="subtitle">Software. Entwicklung. Architektur.</span></a>
-
+---
+layout: page
+css_class: site-landingpage
+navbar:
+  css_class: custom-navbar-floating
+html_head_extras: >-
+  <link href="{% link assets/img/BannerImage-Full.jpg %}"" rel="preload" as="image" fetchpriority="high" blocking="render" />
+---
+<article>
+  <div class="section section-1">
+    <div class="section-border">
+      <div class="section-background">
+        <img alt="" src="{% link assets/img/BannerImage-Full.jpg %}" width="2500" height="1667" style="display:block;object-position: 83% 20%" fetchpriority="high" loading="eager" decoding="async">
+      </div>
+    </div>
+    <div class="section-content-wrapper">
+      <div class="section-content container-fluid row">
+        <div class="hero-text col-md-6 col-lg-6">
+          <p>Softwareentwickler mit 8 Jahren Erfahrung im Bereich Entwicklung und Architektur. Verschiedene Sprachen &amp; Frameworks, von C# über Go und Kotlin bis Python und JavaScript</p>
         </div>
-      </nav>
-    </header>
-    <main id="content" role="main">
-      <article>
-        <div class="section section-1">
-          <div class="section-border">
-            <div class="section-background">
-              <img alt="" src="/assets/img/BannerImage-Full.jpg" width="2500" height="1667" style="display:block;object-position: 83% 20%" fetchpriority="high" loading="eager" decoding="async">
-            </div>
+        <div class="col-md-1 col-lg-1"></div>
+        <div class="contact-form col-md-4 col-lg-4">
+          <div class="contact-text">
+            <p>
+              Verfügbar für freiberufliche Projekte und befristete Anstellungen.
+            </p>
           </div>
-          <div class="section-content-wrapper">
-            <div class="section-content container-fluid row">
-              <div class="hero-text col-md-6 col-lg-6">
-                <p>Softwareentwickler mit 8 Jahren Erfahrung im Bereich Entwicklung und Architektur. Verschiedene Sprachen &amp; Frameworks, von C# über Go und Kotlin bis Python und JavaScript</p>
-              </div>
-              <div class="col-md-1 col-lg-1"></div>
-              <div class="contact-form col-md-4 col-lg-4">
-                <div class="contact-text">
-                  <p>
-                    Verfügbar für freiberufliche Projekte und befristete Anstellungen.
-                  </p>
-                </div>
-                <div class="contact-button-container">
-                  <a href="mai&#x006C;to&#x003A;antispam.%63%6F%6E%74%61%63%74REMOVETHISTEXTBEFORESENDING&#64;%74%61%6B%74%67%65%62%65%72&#46;%69%74" class="mai&#x006C;-link contact-button btn btn-warning">Kontakt aufnehmen</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-    </main>
-    <footer class="custom-footer-dark">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-8"></div>
-          <div class="col-md-4">
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a class="nav-link p-0 text-light" href="/datenschutz.html">Datenschutz</a></li>
-              <li class="nav-item mb-2"><a class="nav-link p-0 text-light" href="/impressum.html">Impressum</a></li>
-            </ul>
+          <div class="contact-button-container">
+            <a href="mai&#x006C;to&#x003A;antispam.%63%6F%6E%74%61%63%74REMOVETHISTEXTBEFORESENDING&#64;%74%61%6B%74%67%65%62%65%72&#46;%69%74" class="mai&#x006C;-link contact-button btn btn-warning">Kontakt aufnehmen</a>
           </div>
         </div>
       </div>
-    </footer>
-    <script type="text/javascript">
-      document.querySelectorAll("a.mail-link").forEach(a => {
-        a.href = a.href.replace("REMOVETHISTEXTBEFORESENDING", "").replace("antispam.", "");
-      });
-    </script>
-  </body>
-
-</html>
+    </div>
+  </div>
+</article>

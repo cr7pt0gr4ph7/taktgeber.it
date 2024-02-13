@@ -1,0 +1,25 @@
+---
+---
+<!DOCTYPE html>
+<html class="{{ page.css_class | default: 'site-default' }}" lang="{{ page.lang }}">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lukas Waslowski - Software. Entwicklung. Architektur.</title>
+    {{ page.html_head_extras }}
+    <link href="/assets/css/bootstrap-icons.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <link href="/assets/css/default.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    {% include header.html %}
+    <main id="content" role="main">
+      {{ content }}
+    </main>
+    {% include footer.html %}
+    {% include utilities/mail-link-fixup.html %}
+  </body>
+
+</html>
