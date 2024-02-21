@@ -31,23 +31,25 @@
 
 .navbar.custom-navbar-tall {
   --bs-navbar-padding-x: 2.5vw;
-  /*--bs-navbar-padding-y: 3vw;*/
-  --bs-navbar-padding-y: 2vw;
-  --bs-navbar-brand-padding-y: 0;
+  --bs-navbar-padding-y: 1vw;
+  --bs-navbar-brand-padding-y: 1vw;
 }
 
 .navbar-brand {
-  --site-title-font-font-size-value: 2;
-  font-size: calc((var(--site-title-font-font-size-value) - 1) * 1.2vw + 1rem);
+  font-size: var(--custom-navbar-font-size);
   line-height: 1.4em;
   transform: translateY(-0.18em);
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .navbar-brand .title {
   font-weight: 500;
   text-shadow: 0 0 1px black;
+  font-size: calc(min(1em, 100vw / 340 * 20.08));
 }
 
 .navbar-brand .subtitle {
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+  font-size: calc(min(1em, 100vw / 340 * 20.08));
 }
