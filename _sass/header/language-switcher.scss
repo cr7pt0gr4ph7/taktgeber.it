@@ -1,0 +1,28 @@
+.navbar {
+  .language-switcher {
+    line-height: calc(1.4 * var(--custom-navbar-font-size));
+    font-size: calc(0.85 * min(var(--custom-navbar-font-size), 100vw / 340 * 20.08));
+    transform: translateY(calc(-0.18 * var(--custom-navbar-font-size)));
+
+    a {
+      color: var(--bs-tertiary-color);
+      text-decoration: none;
+
+      &.active {
+        color: var(--bs-body-color);
+      }
+
+      &,
+      &.active {
+        &:hover,
+        &:focus {
+          color: var(--bs-secondary-color);
+        }
+
+        &:active {
+          color: var(--bs-body-color);
+        }
+      }
+    }
+  }
+}
