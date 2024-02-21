@@ -17,11 +17,11 @@
 
       &:hover,
       &:focus {
-        color: var(--bs-secondary-color);
+        color: black;
       }
 
       &:active {
-        color: var(--bs-body-color);
+        color: var(--bs-secondary-color);
       }
     }
   }
