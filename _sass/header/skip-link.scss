@@ -1,5 +1,16 @@
 .header-skip-link {
   background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9000;
+  color: black;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 3px;
+  border: 1px solid black;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 .header-skip-link:not(.visually-hidden-focusable) {
