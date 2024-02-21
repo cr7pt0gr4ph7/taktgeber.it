@@ -8,6 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ site.translations.title[page.lang] | default: site.title }}</title>
   {{ page.html_head_extras }}
+  {% for image_url in page.preload_images -%}
+    <link href="{% link {{ image_url }} %}" rel="preload" as="image" fetchpriority="high" blocking="render" />
+  {% endfor -%}
   {% for translation in page.translations -%}
     <link rel="alternate" hreflang="{{ translation[0] }}" href="{% link {{ translation[1] }} %}" />
   {%- endfor %}
