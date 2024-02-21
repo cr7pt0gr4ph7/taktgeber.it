@@ -6,12 +6,22 @@ navbar:
 html_head_extras: >-
   <link href="{% link assets/img/BannerImage-Full.jpg %}" rel="preload" as="image" fetchpriority="high" blocking="render" />
 redirect_from:
-  - /en
-  - /en/
-  - /de
-  - /de/
+  - /
   - /q/vcard
 ---
+{%- capture left_hero_text -%}
+  Softwareentwickler mit 8 Jahren Erfahrung im Bereich Entwicklung und Architektur.
+  Verschiedene Sprachen &amp; Frameworks, von C# über Go und Kotlin bis Python und JavaScript
+{%- endcapture -%}
+
+{%- capture right_hero_text -%}
+  Verfügbar für freiberufliche Projekte und befristete Anstellungen.
+{%- endcapture -%}
+
+{%- capture contact_now_text -%}
+  Kontakt aufnehmen
+{%- endcapture -%}
+
 <article>
   <div class="section section-1">
     <div class="section-border">
@@ -22,17 +32,15 @@ redirect_from:
     <div class="section-content-wrapper">
       <div class="section-content container-fluid row">
         <div class="hero-text col-md-6 col-lg-6">
-          <p>Softwareentwickler mit 8 Jahren Erfahrung im Bereich Entwicklung und Architektur. Verschiedene Sprachen &amp; Frameworks, von C# über Go und Kotlin bis Python und JavaScript</p>
+          <p>{{ left_hero_text }}</p>
         </div>
         <div class="col-md-1 col-lg-1"></div>
         <div class="contact-form col-md-4 col-lg-4">
           <div class="contact-text">
-            <p>
-              Verfügbar für freiberufliche Projekte und befristete Anstellungen.
-            </p>
+            <p>{{ right_hero_text }}</p>
           </div>
           <div class="contact-button-container">
-            <a href="mai&#x006C;to&#x003A;antispam.%63%6F%6E%74%61%63%74REMOVETHISTEXTBEFORESENDING&#64;%74%61%6B%74%67%65%62%65%72&#46;%69%74" class="mai&#x006C;-link contact-button btn btn-warning">Kontakt aufnehmen</a>
+            <a href="mai&#x006C;to&#x003A;antispam.%63%6F%6E%74%61%63%74REMOVETHISTEXTBEFORESENDING&#64;%74%61%6B%74%67%65%62%65%72&#46;%69%74" class="mai&#x006C;-link contact-button btn btn-warning">{{ contact_now_text }}</a>
           </div>
         </div>
       </div>
