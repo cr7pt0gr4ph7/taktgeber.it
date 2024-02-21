@@ -3,23 +3,26 @@
 <!DOCTYPE html>
 <html class="{{ page.css_class | default: 'site-default' }}" lang="{{ page.lang }}">
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ site.title }}</title>
-    {{ page.html_head_extras }}
-    <link href="{% link assets/css/bootstrap.min.css %}" rel="stylesheet" />
-    <link href="{% link assets/css/default.scss %}" rel="stylesheet" />
-    <link href="{% link assets/css/bootstrap-icons.min.css %}" rel="stylesheet" />
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.translations.title[page.lang] | default: site.title }}</title>
+  {{ page.html_head_extras }}
+  {% for translation in page.translations -%}
+    <link rel="alternate" hreflang="{{ translation[0] }}" href="{% link {{ translation[1] }} %}" />
+  {%- endfor %}
+  <link href="{% link assets/css/bootstrap.min.css %}" rel="stylesheet" />
+  <link href="{% link assets/css/default.scss %}" rel="stylesheet" />
+  <link href="{% link assets/css/bootstrap-icons.min.css %}" rel="stylesheet" />
+</head>
 
-  <body>
-    {% include header.html %}
-    <main id="content" role="main">
-      {{ content }}
-    </main>
-    {% include footer.html %}
-    {% include utilities/mail-link-fixup.html %}
-  </body>
+<body>
+  {% include header.html %}
+  <main id="content" role="main">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+  {% include utilities/mail-link-fixup.html %}
+</body>
 
 </html>

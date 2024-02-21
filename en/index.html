@@ -1,0 +1,25 @@
+---
+layout: page
+css_class: site-landingpage
+navbar:
+  css_class: custom-navbar-floating
+html_head_extras: >-
+  <link href="{% link assets/img/BannerImage-Full.jpg %}" rel="preload" as="image" fetchpriority="high" blocking="render" />
+translations:
+  de: de/index.html
+---
+{%- capture left_hero_text -%}
+  Hi! I'm a software engineer with 8 years of experience with development and architecture.
+  I'm proficient in various languages &amp; frameworks.
+  <!-- Verschiedene Sprachen &amp; Frameworks, von C# über Go und Kotlin bis Python und JavaScript -->
+{%- endcapture -%}
+
+{%- capture right_hero_text -%}
+  Available for freelance projects and employments.
+{%- endcapture -%}
+
+{%- capture contact_now_text -%}
+  Contact now
+{%- endcapture -%}
+
+{% include pages/landing-page.html %}
