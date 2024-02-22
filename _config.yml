@@ -20,6 +20,7 @@
 
 title: Lukas Waslowski - Software. Entwicklung. Architektur.
 email: your-email@example.com
+encoded_mail: "mai&#x006C;to&#x003A;antispam.%63%6F%6E%74%61%63%74REMOVETHISTEXTBEFORESENDING&#64;%74%61%6B%74%67%65%62%65%72&#46;%69%74"
 # tagline:
 # description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
