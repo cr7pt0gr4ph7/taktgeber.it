@@ -25,6 +25,10 @@ encoded_mail: "mai&#x006C;to&#x003A;antispam.%63%6F%6E%74%61%63%74REMOVETHISTEXT
 # description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://taktgeber.it" # the base hostname & protocol for your site, e.g. http://example.com
+social:
+  blog: https://blog.taktgeber.it/
+  github: https://github.com/cr7pt0gr4ph7
+  stackoverflow: https://stackoverflow.com/users/455269/cr7pt0gr4ph7
 
 # Build settings
 permalink: /:categories/:year/:month/:day/:title
