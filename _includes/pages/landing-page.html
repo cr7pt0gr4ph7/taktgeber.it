@@ -31,21 +31,29 @@
           </header>
           {%- assign icons = site.data.projects.icons -%}
           {%- for project in site.data.projects.projects %}
-            <div class="col-lg-4 mb-lg-5 col-md-6 mb-md-3 mb-3 max-width" style="--max-width-lg: 23rem;">
-              <div class="card">
+            <div class="col-lg-4 mb-lg-5 col-md-6 mb-md-3 mb-3">
+              <div class="card shadow border-on-card-body flex-row">
                 <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">{{ project.title[page.lang] | default: project.title.all | markdownify | remove: '<p>' | remove: '</p>' }}</h5>
+                  {%- if project.subtitle -%}
+                    <h6 class="card-subtitle mb-1 text-body-secondary">{{ project.subtitle[page.lang] | default: project.subtitle.all | escape_once }}</h6>
+                  {%- endif -%}
+                  <h5 class="card-title">{{ project.title[page.lang] | default: project.title.all | escape_once }}</h5>
                   <div class="card-text">{{ project.short_description[page.lang] | markdownify }}</div>
                   {%- if project.action -%}
-                    <a href="{{ project.action.url }}" class="align-self-start btn btn-primary">
+                    <a href="{{ project.action.url }}" target="_blank" class="align-self-start btn btn-primary">
                       {%- if project.action.icon -%}
                         {{- icons[project.action.icon] -}}
                         {{- ' ' -}}
                       {%- endif -%}
-                      {{ project.action[page.lang] | markdownify | remove: '<p>' | remove: '</p>' }}
+                      {{- project.action[page.lang] -}}
                     </a>
                   {%- endif %}
                 </div>
+                {%- if project.image -%}
+                  <div class="card-img-col-right">
+                    <div class="card-img-right" style="--image-url: url({% link {{ project.image.src }} %})" aria-label="{{ project.image.alt[page.lang] | escape_once }}"></div>
+                  </div>
+                {%- endif -%}
               </div>
             </div>
           {% endfor %}

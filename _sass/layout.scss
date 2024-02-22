@@ -19,16 +19,27 @@ main article:first-of-type>.section:first-child {
 }
 
 .section-content-wrapper {
-  padding-top: calc(max(20vmax, 378px));
-  padding-bottom: 3vw;
   max-width: 100%;
-  display: flex;
   width: 100%;
   box-sizing: border-box;
-  position: relative;
-
   padding-left: 5vw;
   padding-right: 5vw;
+}
+
+.section-1 .section-content-wrapper {
+  padding-top: calc(max(20vmax, 378px));
+  padding-bottom: 3vw;
+  display: flex;
+  position: relative;
+}
+
+.section-2 header h2 {
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+.dark-section {
+  color: white;
 }
 
 .custom-footer-dark {
