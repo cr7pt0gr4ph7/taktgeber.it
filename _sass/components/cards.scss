@@ -29,7 +29,8 @@
 }
 
 .card-img-col-right {
-  width: 483px;
+  width: 165px;
+  flex-shrink: 0;
   overflow: hidden;
 }
 
@@ -43,9 +44,9 @@
 .card-img-right {
   background:
     linear-gradient(to top,
-      #1f2227ff,
-      #1f2227d1,
-      #1f2227a6,
+      #151616,
+      #151616cc,
+      #1f222770,
       #1f222700) 0 0 / 100% 100% no-repeat,
     var(--image-url) 0 0 / cover no-repeat;
 

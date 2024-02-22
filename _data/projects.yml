@@ -1,0 +1,81 @@
+icons:
+  globe: '<i class="bi bi-globe"></i>'
+  github: '<i class="bi bi-github"></i>'
+tags:
+  jekyll:
+    de: Jekyll
+    en: Jekyll
+  open_source:
+    de: Open Source
+    en: Open Source
+  ruby:
+    de: Ruby
+    en: Ruby
+  technical_writing:
+    de: Schreiben
+    en: Writing
+  web_design:
+    de: Web Design
+    en: Web Design
+projects:
+  - title:
+      de: "Persönlicher Blog über Software: &bdquo;Insights into a Coder's Brain&ldquo;"
+      en: "Personal blog about software: &bdquo;Insights into a Coder's Brain&ldquo;"
+    subtitle:
+      de: "Blog | Software & Frameworks"
+      en: "Personal Blog | Technical Writing"
+    short_description:
+      de: "Mein persönlicher Blog über Program&shy;mierung, Frameworks &amp; Techno&shy;logien _(nur auf English verfügbar)_."
+      en: "My personal blog about coding and my journey with different technologies and frameworks."
+    image:
+      src: assets/img/projects/blog.taktgeber.it-200px.png
+      alt:
+        de: "Ein Screenshot von blog.taktgeber.it"
+        en: "A screenshot of blog.taktgeber.it"
+    action:
+      url: https://blog.taktgeber.it/
+      de: "Blog öffnen"
+      en: "Open Blog"
+      icon: globe
+    tags:
+      - general
+      - technical_writing
+  - title:
+      de: "Tanzgefühl.dance"
+      en: "Web Design & Copy Writing: &bdquo;tanzgefuehl.dance&ldquo;"
+    subtitle:
+      en: "Web Design | Visual Design, Implementation & Deployment"
+      de: "Web Design | Visuelles Design, Umsetzung & Betrieb
+    short_description:
+      de: |-
+        Erstellt mit Jekyll und dem Bootstrap-Framework.
+        Visuelles Design, Umsetzung (HTML, CSS)
+        und Inhalte (ausgenommen Fotos).
+      en: "My personal blog about coding and my journey with different technologies and frameworks (English only)."
+    image:
+      src: assets/img/projects/tanzgefuehl.dance-200px.png
+      alt:
+        de: "Ein Screenshot von tanzgefuehl.dance"
+        en: "A screenshot of tanzgefuehl.dance"
+    long_description:
+      de: |-
+        Erstellt mit Jekyll und dem Bootstrap-Framework.
+        Design, Umsetzung und Inhalte durch taktgeber.it
+        (ausgenommen Fotos).
+      en: |-
+        Created using Jekyll, Bootstrap and SASS/SCSS.
+        Design, realization and content by taktgeber.it
+        (except photos).
+    action:
+      url: https://tanzgefuehl.dance/
+      de: "Webseite anzeigen"
+      en: "Open Website (DE)"
+      icon: globe
+    technologies:
+      - jekyll
+      - css
+      - scss
+      - bootstrap
+    tags:
+      - general
+      - technical_writing
