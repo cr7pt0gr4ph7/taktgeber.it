@@ -26,37 +26,22 @@
     <div class="section dark-section section-2">
       <div class="section-content-wrapper">
         <div class="section-content container-fluid row justify-content-around">
-          <header>
-            <h2>Projekte &amp; Portfolio</h2>
-          </header>
-          {%- assign icons = site.data.projects.icons -%}
-          {%- for project in site.data.projects.projects %}
-            <div class="col-lg-4 mb-lg-5 col-md-6 mb-md-3 mb-3 d-flex align-items-stretch justify-items-stretch">
-              <div class="card shadow border-on-card-body flex-row flex-grow-1">
-                <div class="card-body d-flex flex-column">
-                  {%- if project.subtitle -%}
-                    <h6 class="card-subtitle mb-1 text-body-secondary">{{ project.subtitle[page.lang] | default: project.subtitle.all | escape_once }}</h6>
-                  {%- endif -%}
-                  <h5 class="card-title">{{ project.title[page.lang] | default: project.title.all | escape_once }}</h5>
-                  <div class="card-text">{{ project.short_description[page.lang] | markdownify }}</div>
-                  {%- if project.action -%}
-                    <a href="{{ project.action.url }}" target="_blank" class="mt-auto btn btn-primary">
-                      {%- if project.action.icon -%}
-                        {{- icons[project.action.icon] -}}
-                        {{- ' ' -}}
-                      {%- endif -%}
-                      {{- project.action[page.lang] -}}
-                    </a>
-                  {%- endif %}
-                </div>
-                {%- if project.image -%}
-                  <div class="card-img-col-right">
-                    <div class="card-img-right" style="--image-url: url({% link {{ project.image.src }} %})" aria-label="{{ project.image.alt[page.lang] | escape_once }}"></div>
-                  </div>
-                {%- endif -%}
-              </div>
-            </div>
-          {% endfor %}
+          {%- assign all_projects = site.data.projects.projects -%}
+          {%- assign main_projects = all_projects | where: "type", "main" -%}
+          {%- assign oss_projects = all_projects | where: "type", "open_source" -%}
+          {%- assign side_projects = all_projects | where: "type", "side_project" -%}
+          {% if main_projects and main_projects != empty %}
+            <h2 id="portfolio">Projekte &amp; Portfolio</h2>
+            {%- include pages/projects-list.html projects=main_projects -%}
+          {%- endif -%}
+          {%- if oss_projects and oss_projects != empty -%}
+            <h2>Open-Source-Projekte</h2>
+            {%- include pages/projects-list.html projects=oss_projects -%}
+          {%- endif -%}
+          {%- if side_projects and side_projects != empty -%}
+            <h2>Weitere Projekte</h2>
+            {%- include pages/projects-list.html projects=side_projects -%}
+          {%- endif -%}
         </div>
       </div>
     </div>

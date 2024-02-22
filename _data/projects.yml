@@ -18,7 +18,8 @@ tags:
     de: Web Design
     en: Web Design
 projects:
-  - title:
+  - type: main
+    title:
       de: "Persönlicher Blog über Software: &bdquo;Insights into a Coder's Brain&ldquo;"
       en: "Personal blog about software: &bdquo;Insights into a Coder's Brain&ldquo;"
     subtitle:
@@ -40,32 +41,26 @@ projects:
     tags:
       - general
       - technical_writing
-  - title:
+  - type: main
+    title:
       de: "Tanzgefühl.dance"
       en: "Web Design & Copy Writing: &bdquo;tanzgefuehl.dance&ldquo;"
     subtitle:
       en: "Web Design | Visual Design, Implementation & Deployment"
-      de: "Web Design | Visuelles Design, Umsetzung & Betrieb
+      de: "Web Design | Visuelles Design, Umsetzung & Betrieb"
     short_description:
       de: |-
         Erstellt mit Jekyll und dem Bootstrap-Framework.
-        Visuelles Design, Umsetzung (HTML, CSS)
-        und Inhalte (ausgenommen Fotos).
-      en: "My personal blog about coding and my journey with different technologies and frameworks (English only)."
+        Visuelles Design (inkl. Logo), Umsetzung (HTML, CSS) und Inhalte (ausgenommen Fotos).
+      en: |-
+        Created using Jekyll, Bootstrap and SASS/SCSS.
+        Design (incl. logo), realization and content (except photos)
+        _(only available in German)_.
     image:
       src: assets/img/projects/tanzgefuehl.dance-200px.png
       alt:
         de: "Ein Screenshot von tanzgefuehl.dance"
         en: "A screenshot of tanzgefuehl.dance"
-    long_description:
-      de: |-
-        Erstellt mit Jekyll und dem Bootstrap-Framework.
-        Design, Umsetzung und Inhalte durch taktgeber.it
-        (ausgenommen Fotos).
-      en: |-
-        Created using Jekyll, Bootstrap and SASS/SCSS.
-        Design, realization and content by taktgeber.it
-        (except photos).
     action:
       url: https://tanzgefuehl.dance/
       de: "Webseite anzeigen"
@@ -79,3 +74,35 @@ projects:
     tags:
       - general
       - technical_writing
+  - type: open_source
+    title:
+      all: "jekyll-gem-resolver"
+    subtitle:
+      de: "Software | Jekyll Plugin"
+      en: "Software | Jekyll Plugin"
+    short_description:
+      de: Einfaches Jekyll-Plugin zum Einbinden von Ressourcen aus externen Ruby Gems.
+      en: Simple Jekyll plugin that enables including resources from non-Jekyll gems into the site build.
+    action:
+      url: https://github.com/cr7pt0gr4ph7/jekyll-gem-resolver
+      de: "Zum Repository"
+      en: "Open Repository"
+      icon: github
+    tags:
+      - jekyll
+      - ruby
+      - open_source
+  - title:
+      de: Special title treatment
+      en: Special title treatment
+    short_description:
+      de: With supporting text below as a natural lead-in to additional content.
+      en: With supporting text below as a natural lead-in to additional content.
+    action:
+      url: '#'
+      de: Go somewhere
+      en: Go somewhere
+    tags:
+      - Tag
+      - Tag
+      - Tag
