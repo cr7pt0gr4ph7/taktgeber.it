@@ -25,26 +25,6 @@ email: your-email@example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://taktgeber.it" # the base hostname & protocol for your site, e.g. http://example.com
 
-translations:
-  title:
-    de: Lukas Waslowski - Software. Entwicklung. Architektur.
-    en: Lukas Waslowski - Software. Development. Design.
-  slogan:
-    de: Software. Entwicklung. Architektur.
-    en: Software. Development. Design.
-  imprint:
-    de: Impressum
-    en: Imprint
-  imprint_page:
-    de: de/impressum.html
-    en: en/imprint.html
-  privacy:
-    de: Datenschutz
-    en: Privacy
-  privacy_page:
-    de: de/datenschutz.html
-    en: en/privacy.html
-
 # Build settings
 permalink: /:categories/:year/:month/:day/:title
 

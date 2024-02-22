@@ -1,8 +1,9 @@
+{%- assign translate = site.data.translations -%}
 <header>
   <a href="#content" tabindex="1" class="header-skip-link visually-hidden-focusable">Zum Inhalt springen</a>
   <nav class="navbar navbar-expand-lg custom-navbar-glass custom-navbar-tall {{ page.navbar.css_class }}">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/"><span class="title">Lukas Waslowski</span>&nbsp;&nbsp; <span class="subtitle">{{ site.translations.slogan[page.lang] }}</span></a>
+      <a class="navbar-brand" href="/"><span class="title">Lukas Waslowski</span>&nbsp;&nbsp; <span class="subtitle">{{ translate.slogan[page.lang] }}</span></a>
       {% include header/language-switcher.html %}
     </div>
   </nav>

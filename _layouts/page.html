@@ -1,12 +1,13 @@
 ---
 ---
+{%- assign translate = site.data.translations -%}
 <!DOCTYPE html>
 <html class="{{ page.css_class | default: 'site-default' }}" lang="{{ page.lang }}">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ site.translations.title[page.lang] | default: site.title }}</title>
+  <title>{{ translate.title[page.lang] | default: site.title }}</title>
   {{ page.html_head_extras }}
   {% for image_url in page.preload_images -%}
     <link href="{% link {{ image_url }} %}" rel="preload" as="image" fetchpriority="high" blocking="render" />
