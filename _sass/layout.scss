@@ -33,7 +33,11 @@ main article:first-of-type>.section:first-child {
   position: relative;
 }
 
-.section-2 header h2 {
+.section-2 {
+  min-height: 105lvh;
+}
+
+.section-2 h2 {
   padding-top: 2rem;
   padding-bottom: 1.5rem;
 }
@@ -45,6 +49,7 @@ main article:first-of-type>.section:first-child {
 .custom-footer-dark {
   padding-top: 1rem;
   padding-bottom: 1rem;
+  background-color: #191b1f;
 }
 
 /** Sections **/

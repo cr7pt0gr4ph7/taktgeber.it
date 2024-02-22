@@ -44,7 +44,7 @@ projects:
   - type: main
     title:
       de: "Tanzgefühl.dance"
-      en: "Web Design & Copy Writing: &bdquo;tanzgefuehl.dance&ldquo;"
+      en: "Tanzgefühl.dance"
     subtitle:
       en: "Web Design | Visual Design, Implementation & Deployment"
       de: "Web Design | Visuelles Design, Umsetzung & Betrieb"
@@ -54,8 +54,8 @@ projects:
         Visuelles Design (inkl. Logo), Umsetzung (HTML, CSS) und Inhalte (ausgenommen Fotos).
       en: |-
         Created using Jekyll, Bootstrap and SASS/SCSS.
-        Design (incl. logo), realization and content (except photos)
-        _(only available in German)_.
+        Design (incl. logo), realization and content (except photos).
+        Written in German.
     image:
       src: assets/img/projects/tanzgefuehl.dance-200px.png
       alt:

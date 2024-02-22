@@ -8,12 +8,12 @@
     <div class="section-content-wrapper">
       <div class="section-content container-fluid row">
         <div class="hero-text col-md-6 col-lg-6">
-          <p>{{ left_hero_text }}</p>
+          {{- left_hero_text | markdownify -}}
         </div>
         <div class="col-md-1 col-lg-1"></div>
         <div class="contact-form col-md-4 col-lg-4">
           <div class="contact-text">
-            <p>{{ right_hero_text }}</p>
+            {{ right_hero_text | markdownify }}
           </div>
           <div class="contact-button-container">
             <a href="mai&#x006C;to&#x003A;antispam.%63%6F%6E%74%61%63%74REMOVETHISTEXTBEFORESENDING&#64;%74%61%6B%74%67%65%62%65%72&#46;%69%74" class="mai&#x006C;-link contact-button btn btn-warning">{{ contact_now_text }}</a>
