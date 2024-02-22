@@ -19,3 +19,27 @@ privacy:
 privacy_page:
   de: de/datenschutz.html
   en: en/privacy.html
+about_me:
+  de: Über mich
+  en: About me
+where_to_find_me:
+  de: Kontaktieren # ???
+  en: Where to find me
+social_links:
+  de: Anderswo finden
+  en: Social links
+projects_and_portfolio:
+  de: Projekte &amp; Portfolio
+  en: Projects &amp; portfolio
+open_source_projects:
+  de: Open-Source-Projekte
+  en: Open source projects
+follow_my_blog:
+  de: Meinem Blog folgen
+  en: Follow me on my personal blog
+follow_on_github:
+  de: Auf GitHub folgen
+  en: Follow me on GitHub
+follow_on_stackoverflow:
+  de: Auf StackOverflow folgen
+  en: Follow me on StackOverflow

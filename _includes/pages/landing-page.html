@@ -1,3 +1,4 @@
+{%- assign translate = site.data.translations -%}
 <article>
   <div class="section section-1">
     <div class="section-border">
@@ -7,7 +8,7 @@
     </div>
     <div class="section-content-wrapper">
       <div class="section-content container-fluid row">
-        <div class="hero-text col-md-6 col-lg-6">
+        <div class="hero-text col-md-6 col-lg-6 mb-3 mb-md-0">
           {{- left_hero_text | markdownify -}}
         </div>
         <div class="col-md-1 col-lg-1"></div>
@@ -25,11 +26,26 @@
   {%- if site.data.projects.projects-%}
     <div class="section dark-section section-2">
       <div class="section-content-wrapper">
-        <div class="section-content container-fluid row justify-content-around">
+        <div class="section-content container-fluid row justify-content-around" style="width: calc(100% + 1.5rem)">
+          <div class="about-nav-links d-md-none">
+            <a href="#about">{{ translate.about_me[page.lang] }}</a> | <a href="#socials">{{ translate.social_links[page.lang] }}</a> | <a href="#projects">{{ translate.projects_and_portfolio[page.lang]}}</a>
+          </div>
           {%- if about_me_text -%}
-            <h2 id="about">{% if page.lang == 'en' %}About me{% else %}Über mich{% endif %}</h2>
-            <div class="about-text">
-              {{- about_me_text | markdownify -}}
+            <div class="col-lg-7 col-md-9">
+              <h2 id="about">{{ translate.about_me[page.lang] }}</h2>
+              <div class="about-text">
+                {{- about_me_text | markdownify -}}
+              </div>
+            </div>
+            <div class="col-lg-1 d-none d-lg-block"></div>
+            <div class="col-lg-4 col-md-3">
+              <h2 id="socials">{{ translate.where_to_find_me[page.lang] }}</h2>
+              <ul class="social-links">
+                {% if site.social.blog %}<li class="card mb-3"><a href="{{ site.social.blog }}" class="card-body" title="{{ translate.follow_my_blog[page.lang] }}"><i class="bi bi-rss-fill"></i>Blog</a></li>{% endif %}
+                {% if site.social.github %}<li class="card mb-3"><a href="{{ site.social.github }}" class="card-body" title="{{ translate.follow_on_github[page.lang] }}"><i class="bi bi-github"></i>GitHub</a></li>{% endif %}
+                {% if site.social.stackoverflow %}<li class="card mb-3"><a href="{{ site.social.stackoverflow }}" class="card-body" title="{{ translate.follow_on_stackoverflow[page.lang] }}"><i class="bi bi-stack-overflow"></i>StackOverflow</a></li>{% endif %}
+                <li class="card mb-3"><a href="#" class="card-body" title="Send me a mail"><i class="bi bi-at"></i>Mail</a></li>
+              </ul>
             </div>
           {%- endif -%}
           
@@ -39,12 +55,12 @@
           {%- assign side_projects = all_projects | where: "type", "side_project" -%}
 
           {% if main_projects and main_projects != empty %}
-            <h2 id="portfolio">{% if page.lang == 'en' %}Projects &amp; portfolio{% else %}Projekte &amp; Portfolio{% endif %}</h2>
+            <h2 id="projects">{{ translate.projects_and_portfolio[page.lang] }}</h2>
             {%- include pages/projects-list.html projects=main_projects -%}
           {%- endif -%}
 
           {%- if oss_projects and oss_projects != empty -%}
-            <h2>{% if page.lang == 'en' %}Open source projects{% else %}Open-Source-Projekte{% endif %}</h2>
+            <h2>{{ translate.open_source_projects[page.lang] }}</h2>
             {%- include pages/projects-list.html projects=oss_projects -%}
           {%- endif -%}
 

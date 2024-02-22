@@ -1,0 +1,32 @@
+.social-links {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+
+  i {
+    margin-right: 1rem;
+  }
+
+  a.card-body {
+    font-weight: 500;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .card {
+    &:has(a.card-body:hover),
+    &:has(a.card-body:focus) {
+      background-color: #eeeef0;
+      color: #000000;
+    }
+
+    &:has(a.card-body:active) {
+      background-color: #dddddd;
+    }
+  }
+}
+
+a.card-body {
+  text-decoration: none;
+}

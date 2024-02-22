@@ -22,7 +22,7 @@
 .contact-text {
   color: white;
   font-family: serif;
-  font-size: calc(1rem * 24 / 16);
+  font-size: calc(max(1.2rem, min(1rem * 24 / 16, 4.4vw)));
 }
 
 .contact-button {

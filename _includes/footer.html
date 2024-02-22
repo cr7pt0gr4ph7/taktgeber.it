@@ -1,15 +1,26 @@
+{%- assign translate = site.data.translations -%}
 <footer class="custom-footer-dark">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-8"></div>
-      <div class="col-md-4">
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a class="nav-link p-0 text-light" href="{% link {{ translate.privacy_page[page.lang] }} %}">{{ translate.privacy[page.lang] }}</a></li>
-          <li class="nav-item mb-2"><a class="nav-link p-0 text-light" href="{% link {{ translate.imprint_page[page.lang] }} %}">{{ translate.imprint[page.lang] }}</a></li>
-        </ul>
-      </div>
-      <div class="col-12">
-        <div class="copyright-hint">{{ translate.copyright[page.lang] }}</div>
+  <div class="section-content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-5"></div>
+        <div class="col-md-2">
+          <ul class="nav flex-column">
+            {% if site.social.blog %}<li class="nav-item mb-2"><a class="nav-link p-0 text-light" href="{{ site.social.blog }}">Blog</a></li>{% endif %}
+            {% if site.social.github %}<li class="nav-item mb-2"><a class="nav-link p-0 text-light" href="{{ site.social.github }}">GitHub</a></li>{% endif %}
+            {% if site.social.stackoverflow %}<li class="nav-item mb-2"><a class="nav-link p-0 text-light" href="{{ site.social.stackoverflow }}">StackOverflow</a></li>{% endif %}
+          </ul>
+        </div>
+        <div class="col-md-1">
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a class="nav-link p-0 text-light" href="{% link {{ translate.privacy_page[page.lang] }} %}">{{ translate.privacy[page.lang] }}</a></li>
+            <li class="nav-item mb-2"><a class="nav-link p-0 text-light" href="{% link {{ translate.imprint_page[page.lang] }} %}">{{ translate.imprint[page.lang] }}</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-12">
+          <div class="copyright-hint">{{ translate.copyright[page.lang] }}</div>
+        </div>
       </div>
     </div>
   </div>

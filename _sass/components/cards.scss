@@ -11,6 +11,7 @@
 
   &:has(.card-body + .card-img-col-right) .card-body {
     border-right-width: 2px;
+    flex-grow: 1;
   }
 
   &.flex-row .card-body {
@@ -29,6 +30,7 @@
 }
 
 .card-img-col-right {
+  max-width: 35%;
   width: 165px;
   flex-shrink: 0;
   overflow: hidden;
