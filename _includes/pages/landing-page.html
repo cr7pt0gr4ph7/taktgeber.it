@@ -26,18 +26,28 @@
     <div class="section dark-section section-2">
       <div class="section-content-wrapper">
         <div class="section-content container-fluid row justify-content-around">
+          {%- if about_me_text -%}
+            <h2 id="about">{% if page.lang == 'en' %}About me{% else %}Über mich{% endif %}</h2>
+            <div class="about-text">
+              {{- about_me_text | markdownify -}}
+            </div>
+          {%- endif -%}
+          
           {%- assign all_projects = site.data.projects.projects -%}
           {%- assign main_projects = all_projects | where: "type", "main" -%}
           {%- assign oss_projects = all_projects | where: "type", "open_source" -%}
           {%- assign side_projects = all_projects | where: "type", "side_project" -%}
+
           {% if main_projects and main_projects != empty %}
-            <h2 id="portfolio">Projekte &amp; Portfolio</h2>
+            <h2 id="portfolio">{% if page.lang == 'en' %}Projects &amp; portfolio{% else %}Projekte &amp; Portfolio{% endif %}</h2>
             {%- include pages/projects-list.html projects=main_projects -%}
           {%- endif -%}
+
           {%- if oss_projects and oss_projects != empty -%}
-            <h2>Open-Source-Projekte</h2>
+            <h2>{% if page.lang == 'en' %}Open source projects{% else %}Open-Source-Projekte{% endif %}</h2>
             {%- include pages/projects-list.html projects=oss_projects -%}
           {%- endif -%}
+
           {%- if side_projects and side_projects != empty -%}
             <h2>Weitere Projekte</h2>
             {%- include pages/projects-list.html projects=side_projects -%}
