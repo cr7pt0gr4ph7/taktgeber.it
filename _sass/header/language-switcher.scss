@@ -7,6 +7,11 @@
   a {
     color: var(--bs-tertiary-color);
     text-decoration: none;
+    font-weight: 400;
+
+    @media (min-width: 780px) {
+      font-weight: inherit;
+    }
 
     &.active {
       color: var(--bs-body-color);
@@ -28,12 +33,23 @@
 
   &.animated a {
     display: inline-block;
-    padding-left: 0.1em;
-    padding-right: 0.15em;
-    border-radius: 5px;
-    line-height: 1.2em;
     background-color: transparent;
     transition: background-color 0.25s linear;
+    border-radius: 5px;
+    line-height: 1.2em;
+    padding-left: max(0.1em, 5px);
+    padding-right: max(0.15em, 6px);
+    margin-left: -1px;
+    margin-right: -1px;
+
+    &:first-child {
+      /* Align start of text */
+      margin-left: calc(-1 * max(0.1em, 5px));
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
 
     &,
     &.active {
@@ -46,5 +62,4 @@
       }
     }
   }
-
 }
