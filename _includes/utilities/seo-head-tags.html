@@ -1,0 +1,17 @@
+<meta property="og:title" content="Lukas Waslowski - Software. Entwicklung. Architektur." />
+<meta property="og:locale" content="de_DE" />
+{% if page.redirect.to %}
+  <link rel="canonical" href="{{ page.redirect.to }}" />
+  <meta property="og:url" content="{{ page.redirect.to }}" />
+{% else %}
+  <link rel="canonical" href="{{ page.url | absolute_url }}" />
+  <meta property="og:url" content="{{ page.url | absolute_url }}" />
+{% endif %}
+<meta property="og:site_name" content="{{ translate.title[page.lang] | default: site.title }}" />
+<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}{% link assets/img/SharePreview.jpg %}" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="{{ site.url }}{{ site.baseurl }}{% link assets/img/SharePreview.jpg %}" />
+<meta property="twitter:title" content="{{ translate.title[page.lang] | default: site.title }}" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"{{ translate.title[page.lang] | default: site.title }}","url":"{{ page.url | absolute_url }}"}</script>
