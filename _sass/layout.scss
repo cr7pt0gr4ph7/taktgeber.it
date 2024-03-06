@@ -80,6 +80,7 @@ main article:first-of-type>.section:first-child {
 
     &:hover,
     &:focus {
+      text-decoration: underline;
       color: #eee;
     }
 
