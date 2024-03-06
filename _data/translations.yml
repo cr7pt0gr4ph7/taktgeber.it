@@ -1,3 +1,6 @@
+date_format:
+  de: "%e. %b. %Y"
+  en: "%b %e, %Y"
 copyright:
   de: "&copy; 2024 Lukas Waslowski. Alle Rechte vorbehalten."
   en: "&copy; 2024 Lukas Waslowski. All rights reserved."
@@ -25,6 +28,9 @@ about_me:
 where_to_find_me:
   de: Kontaktieren
   en: Where to find me
+latest_blog_posts:
+  de: Letzte Blog-Posts
+  en: Latest blog posts
 social_links:
   de: Kontaktieren
   en: Social links

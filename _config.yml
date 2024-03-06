@@ -49,6 +49,7 @@ defaults:
       locale: en_US
 
 plugins:
+  - jekyll-date-localization
   - jekyll-redirect-from
 
 # Exclude from processing.

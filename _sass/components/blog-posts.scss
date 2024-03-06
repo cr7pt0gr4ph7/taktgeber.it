@@ -1,0 +1,41 @@
+.blog-posts {
+  list-style: none;
+  padding: 0;
+}
+
+.blog-post {
+  margin: 0;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  padding-bottom: 1em;
+}
+
+.blog-post-title {
+  color: #eee;
+  font-weight: 500;
+  font-size: calc(14em / 16);
+}
+
+.blog-post-subtitle {
+  color: #ddd;
+  font-size: calc(14em / 16);
+}
+
+.blog-post a {
+
+  &:hover,
+  &:active,
+  &:focus {
+    .blog-post-title {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+    .blog-post-subtitle {
+      color: #e0e0e0;
+    }
+  }
+}

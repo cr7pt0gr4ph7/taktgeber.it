@@ -1,0 +1,18 @@
+- title: "Using SASS files from Ruby gems with Jekyll"
+  url: https://blog.taktgeber.it/articles/using-sass-files-from-ruby-gems-with-jekyll/
+  date: 2024-02-13
+  categories:
+    - Jekyll
+- title: "Dynamically centering an image via CSS"
+  url: https://blog.taktgeber.it/articles/dynamically-centering-an-image-via-css/
+  date: 2024-02-03
+  categories:
+    - CSS
+    - In-depth
+- title: "Choosing a cross-platform framework for mobile apps: Expo vs. Compose"
+  url: https://blog.taktgeber.it/articles/crossplatform-app-frameworks-expo-vs-compose/
+  date: 2024-01-23
+  categories:
+    - Mobile
+    - Android
+    - iOS

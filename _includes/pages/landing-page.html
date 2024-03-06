@@ -39,13 +39,36 @@
             </div>
             <div class="col-lg-1 d-none d-lg-block"></div>
             <div class="col-lg-4 col-md-3">
-              <h2 id="socials">{{ translate.where_to_find_me[page.lang] }}</h2>
-              <ul class="social-links">
-                {% if site.social.blog %}<li class="card mb-3"><a href="{{ site.social.blog }}" class="card-body" title="{{ translate.follow_my_blog[page.lang] }}"><i class="bi bi-rss-fill"></i>Blog</a></li>{% endif %}
-                {% if site.social.github %}<li class="card mb-3"><a href="{{ site.social.github }}" class="card-body" title="{{ translate.follow_on_github[page.lang] }}"><i class="bi bi-github"></i>GitHub</a></li>{% endif %}
-                {% if site.social.stackoverflow %}<li class="card mb-3"><a href="{{ site.social.stackoverflow }}" class="card-body" title="{{ translate.follow_on_stackoverflow[page.lang] }}"><i class="bi bi-stack-overflow"></i>StackOverflow</a></li>{% endif %}
-                <li class="card mb-3"><a href="#" class="card-body" title="Send me a mail"><i class="bi bi-at"></i>Mail</a></li>
-              </ul>
+              {% if site.social %}
+                <h2 id="socials">{{ translate.where_to_find_me[page.lang] }}</h2>
+                <ul class="social-links">
+                  {% if site.social.blog %}<li class="card mb-3"><a href="{{ site.social.blog }}" class="card-body" title="{{ translate.follow_my_blog[page.lang] }}"><i class="bi bi-rss-fill"></i>Blog</a></li>{% endif %}
+                  {% if site.social.github %}<li class="card mb-3"><a href="{{ site.social.github }}" class="card-body" title="{{ translate.follow_on_github[page.lang] }}"><i class="bi bi-github"></i>GitHub</a></li>{% endif %}
+                  {% if site.social.stackoverflow %}<li class="card mb-3"><a href="{{ site.social.stackoverflow }}" class="card-body" title="{{ translate.follow_on_stackoverflow[page.lang] }}"><i class="bi bi-stack-overflow"></i>StackOverflow</a></li>{% endif %}
+                  <li class="card mb-3"><a href="#" class="card-body" title="Send me a mail"><i class="bi bi-at"></i>Mail</a></li>
+                </ul>
+              {% endif %}
+              {% if site.data.blog_posts %}
+                <h2 id="socials">{{ translate.latest_blog_posts[page.lang] }}</h2>
+                <ul class="blog-posts">
+                  {% for post in site.data.blog_posts %}
+                    <li class="blog-post">
+                      <a href="{{ post.url }}">
+                        <div class="blog-post-title">{{ post.title }}</div>
+                        <div class="blog-post-subtitle">
+                          <span class="blog-post-date">
+                            {{ post.date | date: translate.date_format[page.lang] }}
+                          </span>
+                          //
+                          <span class="blog-post-categories">
+                            {{ post.categories | join: ", " }}
+                          </span>
+                        </div>
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
             </div>
           {%- endif -%}
           
