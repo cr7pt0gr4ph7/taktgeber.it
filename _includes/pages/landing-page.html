@@ -51,27 +51,37 @@
               {% if site.data.blog_posts %}
                 <h2 id="socials">{{ translate.latest_blog_posts[page.lang] }}</h2>
                 <ul class="blog-posts">
-                  {% for post in site.data.blog_posts %}
+                  {% assign recent_posts = site.data.blog_posts.rss.channel.item | slice: 0, 3 %}
+                  {% for post in recent_posts %}
                     <li class="blog-post">
                       <a href="{{ post.url }}">
-                        <div class="blog-post-title">{{ post.title }}</div>
-                        <div class="blog-post-subtitle">
+                        <span class="blog-post-title">{{ post.title }}</span>
+                        <span class="blog-post-subtitle">
+                          //
                           <span class="blog-post-date">
-                            {{ post.date | date: translate.date_format[page.lang] }}
+                            {{ post.pubDate | parse_date | date: translate.date_format[page.lang] }}
                           </span>
+                          {% comment %}
                           //
                           <span class="blog-post-categories">
-                            {{ post.categories | join: ", " }}
+                            {{ post.category | join: ", " }}
                           </span>
-                        </div>
+                          {% endcomment %}
+                        </span>
                       </a>
                     </li>
                   {% endfor %}
+                  {% if site.social.blog %}
+                    <li class="more-blog-posts">
+                      <a href="{{ site.social.blog }}">{{ translate.more_blog_posts[page.lang] }}</a>
+                    </li>
+                  {% endif %}
                 </ul>
+
               {% endif %}
             </div>
           {%- endif -%}
-          
+
           {%- assign all_projects = site.data.projects.projects -%}
           {%- assign main_projects = all_projects | where: "type", "main" -%}
           {%- assign oss_projects = all_projects | where: "type", "open_source" -%}

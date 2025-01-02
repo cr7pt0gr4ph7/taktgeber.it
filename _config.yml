@@ -77,3 +77,8 @@ exclude:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+jekyll_xml:
+  - data: blog_posts
+    source: https://medium.com/feed/@cr7pt0gr4ph7
+    cache: true

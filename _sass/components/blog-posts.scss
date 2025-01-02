@@ -31,11 +31,29 @@
   &:active,
   &:focus {
     .blog-post-title {
-      color: #ffffff;
+      color: #fff;
       text-decoration: underline;
     }
+
     .blog-post-subtitle {
       color: #e0e0e0;
     }
+  }
+}
+
+.more-blog-posts a {
+  color: #eee;
+  text-decoration: none;
+  // text-decoration: underline;
+  // text-decoration-color: #aaa;
+  // text-underline-offset: 2px;
+  font-weight: 500;
+  font-size: calc(14em / 16);
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: #ffffff;
+    text-decoration: underline;
   }
 }
